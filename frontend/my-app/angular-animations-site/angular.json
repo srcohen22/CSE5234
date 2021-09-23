@@ -1,12 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "cli": {
-    "analytics": "241ff830-c855-4856-b34d-50da734814ad"
-  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "my-app": {
+    "angular-animations-site": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/my-app",
+            "outputPath": "dist/angular-animations-site",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "my-app:build:production"
+              "browserTarget": "angular-animations-site:build:production"
             },
             "development": {
-              "browserTarget": "my-app:build:development"
+              "browserTarget": "angular-animations-site:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-app:build"
+            "browserTarget": "angular-animations-site:build"
           }
         },
         "test": {
@@ -105,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "my-app"
+  "defaultProject": "angular-animations-site"
 }
