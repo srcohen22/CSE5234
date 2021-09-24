@@ -8,21 +8,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentService } from './shared/services/content.service';
-<<<<<<< HEAD
 import { PaymentComponent } from './payment/payment.component';
-=======
 import { FoodListComponent } from './food-list/food-list.component';
->>>>>>> Added food list component, displayed on home page
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
-<<<<<<< HEAD
-    PaymentComponent
-=======
+    PaymentComponent,
     FoodListComponent
->>>>>>> Added food list component, displayed on home page
   ],
 
   imports: [
