@@ -11,7 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentService } from './shared/services/content.service';
 import { PaymentComponent } from './payment/payment.component';
 import { FoodListComponent } from './food-list/food-list.component';
-import { SummaryComponent } from './summary/summary.component';
+import { SummaryComponent } from './cart-summary/cart-summary.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,11 @@ import { SummaryComponent } from './summary/summary.component';
     MatButtonModule,
     MatCardModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    RouterModule.forRoot([
+      {path:'', component: FoodListComponent},
+      {path:'cart', component: SummaryComponent}
+    ])
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]

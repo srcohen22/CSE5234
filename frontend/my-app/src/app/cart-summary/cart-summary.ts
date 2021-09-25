@@ -1,4 +1,4 @@
-export interface Summary {
+export interface Cart {
   image: string,
   name: string;
   quantity: number;
