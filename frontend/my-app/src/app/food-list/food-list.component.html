@@ -1,7 +1,30 @@
-<mat-list>
+<!-- <mat-list class="width-80">
   <mat-list-item *ngFor="let foo of food">
     <h3 matLine> {{foo.name}} </h3>
     <p matLine> {{foo.description}} </p>
-    <p matLine> <span class="demo-2"> -- {{foo.price}} </span> </p>
+    <p matLine> <span class="demo-2"> ${{foo.price}} </span> </p>
+    <p matLine> <img class="food-img" src={{foo.image}}></p>
   </mat-list-item>
-</mat-list>
+</mat-list> -->
+
+<div class="container">
+  <div class="food-card" *ngFor="let foo of food">
+    <div class="container-row">
+      <div class="card-title">{{foo.name}}</div>
+      <div class="card-price">{{foo.price}}</div>
+    </div>
+  <hr>
+    <div class="container-row">
+      <div class="card-desc">{{foo.description}}</div>
+      <div>
+        <div class="img-card"><img class="food-img" src={{foo.image}}></div>
+        <div class="quantity">
+          <div class="increase">- ____ +</div>
+        </div>
+        <div class="add-to-cart">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

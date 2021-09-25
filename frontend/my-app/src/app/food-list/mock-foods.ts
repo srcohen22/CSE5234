@@ -1,10 +1,16 @@
 import { Foods } from './foods'
 
 export const FOOD: Foods[] = [
-  { name: 'Cheese Casserole', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 10},
-  { name: 'Carrot Cake', description: 'yummy', price: 8},
-  { name: 'Canteloupe ', description: 'yummm', price: 5},
-  { name: 'Corn Chowder', description: 'yum 2', price: 9},
-  { name: 'Coffee', description: 'cool', price: 4},
-  { name: 'Chicken Chilaquiles', description: 'cluck cluck', price: 12},
+  { name: 'Cheese Casserole', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 10, image: '../assets/food.jpeg'},
+  { name: 'Carrot Cake', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 8, image: '../assets/food.jpeg'},
+  { name: 'Canteloupe ', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 5, image: '../assets/food.jpeg'},
+  { name: 'Corn Chowder', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 9, image: '../assets/food.jpeg'},
+  { name: 'Coffee', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 4, image: '../assets/food.jpeg'},
+  { name: 'Chicken Chilaquiles', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 12, image: '../assets/food.jpeg'},
+  { name: 'Cheese Casserole', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 10, image: '../assets/food.jpeg'},
+  { name: 'Carrot Cake', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 8, image: '../assets/food.jpeg'},
+  { name: 'Canteloupe ', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 5, image: '../assets/food.jpeg'},
+  { name: 'Corn Chowder', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 9, image: '../assets/food.jpeg'},
+  { name: 'Coffee', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 4, image: '../assets/food.jpeg'},
+  { name: 'Chicken Chilaquiles', description: 'Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.', price: 12, image: '../assets/food.jpeg'},
 ]

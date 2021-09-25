@@ -1,3 +1,37 @@
-.food-list {
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-evenly;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+.food-card {
+  min-width: 320px;
   
+  width: 30%;
+  height: auto;
+  padding: 10px;
+}
+
+.card-title, .card-price {
+  font-size: large;
+  font-family: cursive;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.food-img {
+  width: 100px;
+  height: auto;
+  padding: 5px;
 }
