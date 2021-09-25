@@ -4,12 +4,12 @@
   height: auto;
   margin: auto;
   margin-top: 100px;
+  padding: 20px;
   opacity: 90%;
-  border-radius: 5%;
+  border-radius: 1%;
 }
 
 .title {
-  padding: 20px 0px 0px 0px;
   font-size: xx-large;
   font-family: cursive;
   text-align: center;
