@@ -6,17 +6,20 @@ import { PageComponent } from './page/page.component';
 import { MatButtonModule} from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentService } from './shared/services/content.service';
 import { PaymentComponent } from './payment/payment.component';
 import { FoodListComponent } from './food-list/food-list.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
     PaymentComponent,
-    FoodListComponent
+    FoodListComponent,
+    SummaryComponent
   ],
 
   imports: [
@@ -25,7 +28,8 @@ import { FoodListComponent } from './food-list/food-list.component';
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatTableModule
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]

@@ -1,0 +1,69 @@
+<style>
+.summary-background{
+    background-color: white;
+    margin-left: 80px;
+    margin-right: 80px;
+    opacity: 90%;
+}
+.summary-text{
+    font-family: arial;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity:95%;
+}
+table {
+  font-family: arial;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th {
+  text-align: left;
+  padding: 8px;
+}
+td {
+  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+</style>
+
+<div class="summary-background">
+    <div class="summary-text">
+        <h2>Order Summary</h2>
+        <table mat-table [dataSource]="summary">
+            <ng-container matColumnDef="image">
+                <th mat-header-cell *matHeaderCellDef> Item </th>
+                <td mat-cell *matCellDef="let item"><img src="{{item.image}}" height="80px"></td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let item"> {{item.name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Price </th>
+                <td mat-cell *matCellDef="let item"> ${{item.price}} </td>
+              </ng-container>
+
+            <ng-container matColumnDef="quantity">
+                <th mat-header-cell *matHeaderCellDef> Quantity </th>
+                <td mat-cell *matCellDef="let item"> {{item.quantity}} </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <h4 style="text-align: end; margin-right: 27%">Total: $27</h4>
+    </div>
+    <div class="summary-text">
+        <h4>Bill to:</h4>
+        <p style="font-style:italic">Brutus Buckeye</p>
+        <p style="font-style:italic">XXXX-XXXX-XXXX-1234</p>
+        <button style="margin-top:10px">Back</button>
+        <button style="margin-top:10px; float:right">Confirm</button>
+    </div>
+    
+</div>
