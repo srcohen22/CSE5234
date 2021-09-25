@@ -16,13 +16,17 @@
   <hr>
     <div class="container-row">
       <div class="card-desc">{{foo.description}}</div>
-      <div>
+      <div class="container-column">
         <div class="img-card"><img class="food-img" src={{foo.image}}></div>
         <div class="quantity">
-          <div class="increase">- ____ +</div>
+          <div class="increase">
+            <button class="btn">-</button>
+            <div class="quant">0</div>
+            <button class="btn">+</button>
+          </div>
         </div>
         <div class="add-to-cart">
-          <button>Add to Cart</button>
+          <button class="btn">Add to Cart</button>
         </div>
       </div>
     </div>
