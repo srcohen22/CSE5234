@@ -1,0 +1,27 @@
+<h1 class="title">Items Catalog</h1>
+  <hr class="width-80">
+<div class="container">
+  <div class="food-card" *ngFor="let foo of food">
+    <div class="container-row">
+      <div class="card-title">{{foo.name}}</div>
+      <div class="card-price">{{foo.price}}</div>
+    </div>
+  <hr>
+    <div class="container-row">
+      <div class="card-desc">{{foo.description}}</div>
+      <div class="container-column">
+        <div class="img-card"><img class="food-img" src={{foo.image}}></div>
+        <div class="quantity">
+          <div class="increase">
+            <button class="btn">-</button>
+            <div class="quant">0</div>
+            <button class="btn">+</button>
+          </div>
+        </div>
+        <div class="add-to-cart">
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
