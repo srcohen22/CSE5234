@@ -9,12 +9,14 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ContentService } from './shared/services/content.service';
 import { PaymentComponent } from './payment/payment.component';
+import { ShippingComponent } from './shipping/shipping.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageComponent,
-    PaymentComponent
+    PaymentComponent,
+    ShippingComponent
   ],
 
   imports: [
