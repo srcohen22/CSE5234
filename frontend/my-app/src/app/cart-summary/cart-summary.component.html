@@ -16,28 +16,42 @@
 table {
   font-family: arial;
   border-collapse: collapse;
-  width: 80%;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
 }
 
 th {
   text-align: left;
-  padding: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 td {
   border-top: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
+tr.mat-row, tr.mat-footer-row {
+    height: 100px;
+}
+
+tr.mat-header-row {
+    height: 20px;
+}
+
+.total{
+    margin-top: 40px;
+    font-weight: 500;
+}
+
 </style>
 
 <div class="summary-background">
     <div class="summary-text">
-        <h2>Order Summary</h2>
+        <h1>Order Summary</h1>
         <table mat-table [dataSource]="cart">
             <ng-container matColumnDef="image">
                 <th mat-header-cell *matHeaderCellDef> Item </th>
-                <td mat-cell *matCellDef="let item"><img src="{{item.image}}" height="80px"></td>
+                <td mat-cell *matCellDef="let item" style="width:80px; padding-right:20px;"><img src="{{item.image}}" height="80px"></td>
             </ng-container>
             <ng-container matColumnDef="name">
                 <th mat-header-cell *matHeaderCellDef></th>
@@ -45,19 +59,19 @@ td {
             </ng-container>
 
             <ng-container matColumnDef="price">
-                <th mat-header-cell *matHeaderCellDef> Price </th>
-                <td mat-cell *matCellDef="let item"> ${{item.price}} </td>
+                <th mat-header-cell *matHeaderCellDef style="text-align:center"> Price </th>
+                <td mat-cell *matCellDef="let item" style="text-align:center"> ${{item.price}} </td>
               </ng-container>
 
             <ng-container matColumnDef="quantity">
-                <th mat-header-cell *matHeaderCellDef> Quantity </th>
-                <td mat-cell *matCellDef="let item"> {{item.quantity}} </td>
+                <th mat-header-cell *matHeaderCellDef style="text-align:center"> Quantity </th>
+                <td mat-cell *matCellDef="let item" style="text-align:center"> {{item.quantity}} </td>
             </ng-container>
 
             <ng-container matColumnDef="edit">
                 <th mat-header-cell *matHeaderCellDef></th>
-                <td mat-cell *matCellDef="let item">
-                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                <td mat-cell *matCellDef="let item" style="text-align:center">
+                    <svg style="width:24px;height:24px;padding-right:5px" viewBox="0 0 24 24">
                         <path fill="grey" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
                     </svg>
                     <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -68,8 +82,8 @@ td {
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
-        <h4 style="text-align: end; margin-right: 27%">Total: $27</h4>
+        <h3 class="total">Subtotal: $27</h3>
     </div>
     <button routerLink="" routerLinkActive="active" style="margin-top:30px">Back</button>
-    <button routerLink="/shipping" routerLinkActive="active" style="margin-top:30px; float:right">Shipping information</button>
+    <button routerLink="/shipping" routerLinkActive="active" style="margin-top:30px; float:right">Checkout</button>
 </div>

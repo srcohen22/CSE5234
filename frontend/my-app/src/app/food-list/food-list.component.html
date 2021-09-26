@@ -13,13 +13,13 @@
         <div class="img-card"><img class="food-img" src={{foo.image}}></div>
         <div class="quantity">
           <div class="increase">
-            <button class="btn">-</button>
-            <div class="quant">0</div>
-            <button class="btn">+</button>
+            <button (click)="decrease(foo)" class="btn">-</button>
+            <div class="quant">{{foo.temp_quantity}}</div>
+            <button (click)="increase(foo)" class="btn">+</button>
           </div>
         </div>
         <div class="add-to-cart">
-          <button class="btn">Add to Cart</button>
+          <button (click)="addToCart(foo)" class="btn">Add to Cart</button>
         </div>
       </div>
     </div>

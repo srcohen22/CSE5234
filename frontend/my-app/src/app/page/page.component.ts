@@ -18,4 +18,8 @@ export class PageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onNotify() {
+    console.log("in page component")
+  }
+
 }

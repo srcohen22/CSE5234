@@ -1,8 +1,8 @@
 <style>
 .summary-background{
     background-color: white;
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 20px;
+    margin-right: 20px;
     padding-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
@@ -12,14 +12,14 @@
 }
 .summary-text{
     font-family: arial;
-    flex:2;
+    flex:1;
     width:20%;
     margin-top: 50px;
     padding-top: 5px;
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 5px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
     background-color:white;
     border-color: grey;
@@ -31,20 +31,33 @@
     width: 80%;
 }
 table {
-    font-family: arial;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial;
+  border-collapse: collapse;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
 }
 
 th {
-    text-align: left;
-    padding: 8px;
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 td {
-    border-top: 1px solid #dddddd;
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  border-top: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr.mat-row, tr.mat-footer-row {
+    height: 100px;
+}
+
+tr.mat-header-row {
+    height: 20px;
+}
+
+.total{
+    margin-top: 40px;
+    font-weight: 500;
 }
 
 h3 {
