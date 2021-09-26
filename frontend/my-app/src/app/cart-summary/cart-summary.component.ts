@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CART } from './mock-cart';
 import { Cart } from './cart-summary';
 import { ActivatedRoute } from '@angular/router';
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-summary',
@@ -12,8 +13,11 @@ export class SummaryComponent implements OnInit {
 
   cart = CART;
   displayedColumns: string[] = ['image','name','quantity','price', 'edit'];
+  items = this.cartService.getItems();
 
-  // constructor(private route: ActivatedRoute) { }
+  constructor(
+    private cartService: CartService
+    ) { }
 
   ngOnInit(): void {
   }

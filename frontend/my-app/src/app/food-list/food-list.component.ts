@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import { Foods } from './foods';
 import { FOOD } from './mock-foods'
+import { CartService } from '../cart.service'
 
 @Component({
   selector: 'app-food-list',
@@ -13,7 +14,9 @@ export class FoodListComponent implements OnInit {
 
   food = FOOD;
 
-  constructor() { }
+  constructor(
+    private cartService: CartService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -36,6 +39,7 @@ export class FoodListComponent implements OnInit {
   }
 
   addToCart(food: Foods): void {
-    this.updateCart.emit()
+    this.cartService.addToCart(food);
+    window.alert("Added!");
   }
 }
