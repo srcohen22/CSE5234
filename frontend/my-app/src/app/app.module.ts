@@ -14,6 +14,9 @@ import { ShippingComponent } from './shipping/shipping.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { SummaryComponent } from './cart-summary/cart-summary.component';
 import { RouterModule } from '@angular/router';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { RouterModule } from '@angular/router';
     PaymentComponent,
     ShippingComponent,
     FoodListComponent,
-    SummaryComponent
+    SummaryComponent,
+    ConfirmationComponent
   ],
 
   imports: [
@@ -36,7 +40,9 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path:'', component: FoodListComponent},
       {path:'cart', component: SummaryComponent}
-    ])
+    ]),
+    NgbModule,
+    AppRoutingModule
   ],
   providers: [ContentService],
   bootstrap: [AppComponent]

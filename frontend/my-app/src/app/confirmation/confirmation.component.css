@@ -1,58 +1,46 @@
-.shipping-background{
+.confirm-background{
     background-color: white;
     margin: auto;
     max-width: 60rem;
     margin-top: 100px;
+    padding-top: 40mm;
+    padding-bottom: 30mm;
     opacity: 90%;
     
     
     
 }
-.shipping-text{
+.confirm-text{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-left: 10px;
     margin-right: 10px;
+    text-align: center;
+
 }
 
-form {
-    display: grid;
-    grid-gap: 1rem;
-  }
+h1 {
+font-size: 10mm;
+}
+img{
+    padding-top: 10mm;
+}
 
 
-label{
-    color: var(--color-gray);
-    font-size: 1.2rem;
-    font-weight: 300;
-    text-transform: title;
-    margin-bottom: 0.25rem
-  }
-
-
-  input {
-    padding: 0;
-    margin: 0;
-    border: 0.1;
-    outline: 1;
-    font-size: 1rem;
-    width: 100%;
-    appearance: none;
-  }
-
-  .button {
+.button {
     background-color: #000;
     text-transform: uppercase;
     font-size: 0.8rem;
     font-weight: 600;
-    display: block;
+    display: block; 
     color: #fff;
-    width: 100%;
+    width: 50%;
     padding: 1rem;
     border-radius: 0.25rem;
     border: 0;
     cursor: pointer;
     outline: 0;
-    margin-top: 50px
+    margin-top: 60px;
+    margin-left: 230px;
+    
   }
-
