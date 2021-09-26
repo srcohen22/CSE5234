@@ -17,6 +17,7 @@ import { RouterModule } from '@angular/router';
 import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { FinalSummaryComponent } from './final-summary/final-summary.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AppRoutingModule } from './app-routing.module';
     ShippingComponent,
     FoodListComponent,
     SummaryComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
+    FinalSummaryComponent
   ],
 
   imports: [
@@ -39,7 +41,10 @@ import { AppRoutingModule } from './app-routing.module';
     MatTableModule,
     RouterModule.forRoot([
       {path:'', component: FoodListComponent},
-      {path:'cart', component: SummaryComponent}
+      {path:'cart', component: SummaryComponent},
+      {path:'shipping', component: ShippingComponent},
+      {path:'summary', component: FinalSummaryComponent},
+      {path:'confirmation', component: ConfirmationComponent}
     ]),
     NgbModule,
     AppRoutingModule
