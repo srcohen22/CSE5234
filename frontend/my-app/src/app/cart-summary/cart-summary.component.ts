@@ -23,10 +23,7 @@ export class SummaryComponent implements OnInit {
   }
 
   updateSubtotal(){
-    this.subtotal = 0
-    for(var i = 0; i < this.items.length; i++){
-      this.subtotal += this.items[i].price
-    }
+    this.subtotal = this.cartService.subtotal
   }
   delete(item: Foods){
     this.cartService.removeFromCart(item)

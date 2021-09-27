@@ -1,4 +1,5 @@
-import { Component, EventEmitter } from '@angular/core';
+import { Component, } from '@angular/core';
+import { CartService } from './cart.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,7 @@ import { Component, EventEmitter } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+  cart_total = this.cartService.getItems().length
 
-  onNotify() {
-    console.log("added to cart")
-  }
+  constructor(private cartService: CartService) { }
 }

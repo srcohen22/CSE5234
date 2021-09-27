@@ -6,10 +6,25 @@ import { Foods } from './food-list/foods'
 })
 export class CartService {
   items: Foods[] = [];
+  subtotal = 0;
   constructor() { }
 
   addToCart(food: Foods) {
-    this.items.push(food);
+    //check if already in cart
+    var found = false
+    for(var i = 0; i < this.items.length; i++){
+      if(this.items[i].name == food.name){
+        //update cart total
+        this.items[i].cart_quantity += food.temp_quantity
+        found = true
+      }
+    }
+
+    if(!found){
+      food.cart_quantity = food.temp_quantity
+      this.items.push(food);
+    }
+    this.subtotal += (food.temp_quantity * food.price)
   }
 
   removeFromCart(item: Foods) {
@@ -19,6 +34,8 @@ export class CartService {
     for(var i = 0; i < temp_cart.length; i++){
       if(temp_cart[i].name != item.name){
         this.items.push(temp_cart[i])
+      } else {
+        this.subtotal -= this.items[i].cart_quantity
       }
     }
   }
@@ -29,6 +46,7 @@ export class CartService {
 
   clearCart() {
     this.items = [];
+    this.subtotal = 0;
     return this.items;
   }
 

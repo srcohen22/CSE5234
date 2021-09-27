@@ -3,5 +3,6 @@ export interface Foods {
   description: string;
   price: number;
   temp_quantity: number;
+  cart_quantity: number;
   image?: string;
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CART } from '../cart-summary/mock-cart';
+import { Foods } from '../food-list/foods'
+import { CartService } from '../cart.service';
 
 @Component({
   selector: 'app-final-summary',
@@ -8,11 +9,14 @@ import { CART } from '../cart-summary/mock-cart';
 })
 export class FinalSummaryComponent implements OnInit {
 
-  cart = CART;
+  subtotal = 0
+  items = this.cartService.getItems();
   displayedColumns: string[] = ['image','name','quantity','price'];
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
+    this.subtotal = this.cartService.subtotal
   }
+
 
 }
