@@ -41,5 +41,6 @@ export class FoodListComponent implements OnInit {
   addToCart(food: Foods): void {
     this.cartService.addToCart(food);
     window.alert("Added!");
+    console.log(this.cartService)
   }
 }

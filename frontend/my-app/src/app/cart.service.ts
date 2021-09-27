@@ -12,6 +12,17 @@ export class CartService {
     this.items.push(food);
   }
 
+  removeFromCart(item: Foods) {
+    var temp_cart = this.items
+    console.log(item)
+    this.items = []
+    for(var i = 0; i < temp_cart.length; i++){
+      if(temp_cart[i].name != item.name){
+        this.items.push(temp_cart[i])
+      }
+    }
+  }
+
   getItems() {
     return this.items;
   }
@@ -20,4 +31,5 @@ export class CartService {
     this.items = [];
     return this.items;
   }
+
 }

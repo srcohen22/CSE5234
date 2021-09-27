@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CART } from './mock-cart';
-import { Cart } from './cart-summary';
 import { ActivatedRoute } from '@angular/router';
+import { Foods } from '../food-list/foods'
 import { CartService } from '../cart.service';
 
 @Component({
@@ -11,7 +10,7 @@ import { CartService } from '../cart.service';
 })
 export class SummaryComponent implements OnInit {
 
-  cart = CART;
+  subtotal = 0
   displayedColumns: string[] = ['image','name','quantity','price', 'edit'];
   items = this.cartService.getItems();
 
@@ -20,18 +19,19 @@ export class SummaryComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
+    this.updateSubtotal()
   }
 
-  delete(item: Cart){
-    var temp_cart = this.cart
-    this.cart = []
-    var index = -1
-    for(var i = 0; i < temp_cart.length; i++){
-      if(temp_cart[i].name != item.name){
-        this.cart.push(temp_cart[i])
-      }
+  updateSubtotal(){
+    this.subtotal = 0
+    for(var i = 0; i < this.items.length; i++){
+      this.subtotal += this.items[i].price
     }
-    console.log(this.cart)
+  }
+  delete(item: Foods){
+    this.cartService.removeFromCart(item)
+    this.items = this.cartService.getItems()
+    this.updateSubtotal()
   }
 
 }
