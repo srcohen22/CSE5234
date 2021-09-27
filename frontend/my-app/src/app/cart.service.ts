@@ -35,7 +35,7 @@ export class CartService {
       if(temp_cart[i].name != item.name){
         this.items.push(temp_cart[i])
       } else {
-        this.subtotal -= this.items[i].cart_quantity
+        this.subtotal -= item.cart_quantity
       }
     }
   }
