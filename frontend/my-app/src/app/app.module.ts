@@ -18,6 +18,9 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { FinalSummaryComponent } from './final-summary/final-summary.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { FinalSummaryComponent } from './final-summary/final-summary.component';
     FoodListComponent,
     SummaryComponent,
     ConfirmationComponent,
-    FinalSummaryComponent
+    FinalSummaryComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    HomePageComponent
   ],
 
   imports: [

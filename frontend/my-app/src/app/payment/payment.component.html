@@ -1,45 +1,32 @@
-<style>
-.payment-background{
-    background-color: white;
-    margin-left: 80px;
-    margin-right: 80px;
-    opacity: 90%;
-}
-.payment-text{
-    padding-top: 5px;
-    padding-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-.payment-inner-text{
-    margin-bottom: 15px;
-}
-.input-text{
-    margin-left: 5px;
-    margin-right: 10px;
-}
-</style>
-
 <div class="payment-background">
     <div class="payment-text">
         <h2>Payment Information</h2>
         <h4 sytle="font-weight:500">Total Amount: ${{subtotal}}</h4>
         <form>
-            <div class="payment-inner-text">
-                <label>First name: </label>
-                <input type="text" id="first-name" placeholder="First name" class="input-text">
-                <label>Last name: </label>
-                <input type="text" id="last-name" placeholder="Last name" class="input-text">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="first-name" class="form-label">First name: </label>
+                    <input type="text" id="first-name" placeholder="First name" class="form-control">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="last-name" class="form-label">Last name: </label>
+                    <input type="text" id="last-name" placeholder="Last name" class="form-control">
+                </div>
             </div>
-            <div class="payment-inner-text">
-                <label>Card number: </label>
-                <input type="text" id="card-num" placeholder="XXXX-XXXX-XXXX-XXXX" class="input-text" style="width:170px">
-            </div>
-            <div class="payment-inner-text">
-                <label>CVV: </label>
-                <input type="text" id="card-cvv" placeholder="CVV" class="input-text" style="width:50px">
-                <label>Expiration date: </label>
-                <input type="text" id="card-expiration" placeholder="MM/YY" class="input-text" style="width:70px">
+            
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="card-num" class="form-label">Card number: </label>
+                    <input type="text" id="card-num" placeholder="XXXX-XXXX-XXXX-XXXX" class="form-control">
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="card-cvv" class="form-label">CVV: </label>
+                    <input type="text" id="card-cvv" placeholder="CVV" class="form-control input-text">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="card-expiration" class="form-label">Expiration date: </label>
+                    <input type="text" id="card-expiration" placeholder="MM/YY" class="input-text form-control">
+                </div>
             </div>
             <button routerLink="/shipping" routerLinkActive="active" style="margin-top:10px">Back</button>
             <button routerLink="/summary" routerLinkActive="active" style="margin-top:10px; float:right">Confirm</button>
