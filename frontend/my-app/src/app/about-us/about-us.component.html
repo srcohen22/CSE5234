@@ -1,1 +1,22 @@
-<p>about-us works!</p>
+<h1 class="title">Meet Our Team!</h1>
+  <hr class="width-80">
+<div class="container">
+  <div *ngFor="let person of profile" class="row profile-box">
+    <div class="col-md-6">
+      <img class="img-size" src="{{person.image}}"/>
+    </div>
+    <div class="col-md-6 profile-words">
+      <div class="row name-prof">
+        <div class="name col-8">
+          <h1>{{ person.name }}</h1>
+        </div>
+        <div class="position col-4">
+          <h2>{{ person.position }}</h2>
+        </div>
+      </div>
+      <div class="description">
+        <p>{{person.description}}</p>
+      </div>
+    </div>
+  </div>
+</div>
