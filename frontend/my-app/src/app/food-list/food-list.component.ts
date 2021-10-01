@@ -3,6 +3,7 @@ import {MatListModule} from '@angular/material/list';
 import { Foods } from './foods';
 import { FOOD } from './mock-foods'
 import { CartService } from '../cart.service'
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-food-list',
@@ -14,9 +15,7 @@ export class FoodListComponent implements OnInit {
 
   food = FOOD;
 
-  constructor(
-    private cartService: CartService
-  ) { }
+  constructor(private cartService: CartService,private appComponent: AppComponent) { }
 
   ngOnInit(): void {
   }
@@ -41,6 +40,7 @@ export class FoodListComponent implements OnInit {
   addToCart(food: Foods): void {
     if(food.temp_quantity > 0){
       this.cartService.addToCart(food)
+      this.appComponent.updateCart()
     }
   }
 }

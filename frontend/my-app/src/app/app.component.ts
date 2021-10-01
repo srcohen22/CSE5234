@@ -8,7 +8,11 @@ import { CartService } from './cart.service';
 })
 export class AppComponent {
   title = 'my-app';
-  cart_total = this.cartService.getItems().length
+  cart_total = this.cartService.getTotalItems()
 
   constructor(private cartService: CartService) { }
+
+  updateCart(): void {
+    this.cart_total = this.cartService.getTotalItems()
+  }
 }
