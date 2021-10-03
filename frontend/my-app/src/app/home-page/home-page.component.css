@@ -1,4 +1,6 @@
-
+.greeting{
+    background-image: url("/assets/kitchen.png");
+}
 button {
     background-color: #000;
     text-transform: uppercase;
