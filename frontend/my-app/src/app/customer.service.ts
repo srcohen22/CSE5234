@@ -16,7 +16,12 @@ export class CustomerService {
   }
 
   getPayment() {
-    return this.payment[0];
+    console.log(this.payment.length)
+    if (this.payment.length == 0){
+      var blankpayment = <PaymentInfo> {}
+      return blankpayment
+    }
+    return this.payment[this.payment.length-1];
   }
 
   addShipping(shipping: ShippingInfo) {
@@ -25,6 +30,10 @@ export class CustomerService {
   }
 
   getShipping(){
-    return this.shipping[0]
+    if (this.shipping.length == 0){
+      var blankshipping = <ShippingInfo> {}
+      return blankshipping
+    }
+    return this.shipping[this.shipping.length-1]
   }
 }

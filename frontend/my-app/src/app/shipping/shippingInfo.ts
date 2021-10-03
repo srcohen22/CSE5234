@@ -1,5 +1,6 @@
 export interface ShippingInfo {
-    name: string;
+    first_name: string;
+    last_name: string;
     address: string;
     address_line2: string;
     city: string;

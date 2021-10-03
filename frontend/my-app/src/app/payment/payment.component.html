@@ -6,30 +6,30 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="first-name" class="form-label">First name: </label>
-                    <input #first type="text" id="first-name" placeholder="First name" class="form-control">
+                    <input #first value="{{payment.first_name}}" type="text" id="first-name" placeholder="First name" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="last-name" class="form-label">Last name: </label>
-                    <input #last type="text" id="last-name" placeholder="Last name" class="form-control">
+                    <input #last value="{{payment.last_name}}" type="text" id="last-name" placeholder="Last name" class="form-control">
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="card-num" class="form-label">Card number: </label>
-                    <input #card_num type="text" id="card-num" placeholder="XXXX-XXXX-XXXX-XXXX" class="form-control">
+                    <input #card_num value="{{payment.card_num}}" type="text" id="card-num" placeholder="XXXX-XXXX-XXXX-XXXX" class="form-control">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="card-cvv" class="form-label">CVV: </label>
-                    <input type="text" id="card-cvv" placeholder="CVV" class="form-control input-text">
+                    <input #cvv value="{{payment.cvv}}" type="text" id="card-cvv" placeholder="CVV" class="form-control input-text">
                 </div>
                 <div class="form-group col-md-4">
                     <label for="card-expiration" class="form-label">Expiration date: </label>
-                    <input type="text" id="card-expiration" placeholder="MM/YY" class="input-text form-control">
+                    <input #exp value="{{payment.expiration}}" type="text" id="card-expiration" placeholder="MM/YY" class="input-text form-control">
                 </div>
             </div>
             <button routerLink="/shipping" routerLinkActive="active" style="margin-top:10px">Back</button>
-            <button (click)="submitPayment(first.value, last.value, card_num.value)" routerLink="/summary" routerLinkActive="active" style="margin-top:10px; float:right" type="submit">Confirm</button>
+            <button (click)="submitPayment(first.value, last.value, card_num.value, cvv.value, exp.value)" routerLink="/summary" routerLinkActive="active" style="margin-top:10px; float:right" type="submit">Confirm</button>
         </form>
     </div>
 </div>
