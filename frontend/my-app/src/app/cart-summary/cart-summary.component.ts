@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Foods } from '../food-list/foods'
 import { CartService } from '../cart.service';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-summary',
@@ -14,9 +15,7 @@ export class SummaryComponent implements OnInit {
   displayedColumns: string[] = ['image','name','quantity','price', 'edit'];
   items = this.cartService.getItems();
 
-  constructor(
-    private cartService: CartService
-    ) { }
+  constructor(private cartService: CartService,private appComponent: AppComponent) { }
 
   ngOnInit(): void {
     this.updateSubtotal()
@@ -29,6 +28,7 @@ export class SummaryComponent implements OnInit {
     this.cartService.removeFromCart(item)
     this.items = this.cartService.getItems()
     this.updateSubtotal()
+    this.appComponent.updateCart()
   }
 
 }
