@@ -6,7 +6,7 @@ export const PROFILE: AboutUs[] = [
     image: '../../assets/coffee.jpg',
     position: 'CEO'},
   { name: 'Shlok Sah',
-    description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+    description: 'Shlok Sah is a 1st year CSE major grad student with skills of a high school C++ programmer. He loves to cook and play foosball and he wishes to play AC/DC songs on his electric guitar which he has no idea how to play. When he gets bored, he picks up his camera and does some astro photography. He is one of the most confused person around who tries to learn anything he sees on social media. But he is glad to have wonderful founders of this company who are going to make home cooked meals a delightful experience for both customers and home makers.',
     image: '../../assets/cornchowder.jpg',
     position: 'CIO'},
   { name: 'Sam Cohen',
