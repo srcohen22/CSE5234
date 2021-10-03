@@ -97,11 +97,14 @@ h3 {
     </div>
     <div class="summary-text">
         <h3>Shipping:</h3>
-        <p style="font-style:italic">Brutus Buckeye</p>
-        <p style="font-style:italic">XXXX-XXXX-XXXX-1234</p>
+        <p style="font-style:italic">{{shippingInfo.name}}</p>
+        <p style="font-style:italic">{{shippingInfo.address}}</p>
+        <p style="font-style:italic">{{shippingInfo.address_line2}}</p>
+        <p style="font-style:italic">{{shippingInfo.city}}, {{shippingInfo.state}} {{shippingInfo.zip}}</p>
+        <p style="font-style:italic">{{shippingInfo.country}}</p>
         <h3>Billing:</h3>
-        <p style="font-style:italic">Brutus Buckeye</p>
-        <p style="font-style:italic">XXXX-XXXX-XXXX-1234</p>
+        <p style="font-style:italic">{{paymentInfo.first_name}}</p>
+        <p style="font-style:italic">XXXX-XXXX-XXXX-{{paymentInfo.last_four}}</p>
     </div>
 </div>
     <button routerLink="/payment" routerLinkActive="active" style="margin-top:30px">Back</button>

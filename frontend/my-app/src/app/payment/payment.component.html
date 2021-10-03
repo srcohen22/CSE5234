@@ -6,18 +6,18 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="first-name" class="form-label">First name: </label>
-                    <input type="text" id="first-name" placeholder="First name" class="form-control">
+                    <input #first type="text" id="first-name" placeholder="First name" class="form-control">
                 </div>
                 <div class="form-group col-md-6">
                     <label for="last-name" class="form-label">Last name: </label>
-                    <input type="text" id="last-name" placeholder="Last name" class="form-control">
+                    <input #last type="text" id="last-name" placeholder="Last name" class="form-control">
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="card-num" class="form-label">Card number: </label>
-                    <input type="text" id="card-num" placeholder="XXXX-XXXX-XXXX-XXXX" class="form-control">
+                    <input #card_num type="text" id="card-num" placeholder="XXXX-XXXX-XXXX-XXXX" class="form-control">
                 </div>
                 <div class="form-group col-md-2">
                     <label for="card-cvv" class="form-label">CVV: </label>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <button routerLink="/shipping" routerLinkActive="active" style="margin-top:10px">Back</button>
-            <button routerLink="/summary" routerLinkActive="active" style="margin-top:10px; float:right">Confirm</button>
+            <button (click)="submitPayment(first.value, last.value, card_num.value)" routerLink="/summary" routerLinkActive="active" style="margin-top:10px; float:right" type="submit">Confirm</button>
         </form>
     </div>
 </div>

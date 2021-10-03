@@ -6,51 +6,51 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="first-name" class="form-label">First name: </label>
-                        <input type="text" id="first-name" placeholder="First name" class="form-control">
+                        <input #shipping_first type="text" id="first-name" placeholder="First name" class="form-control">
                     </div>
                     <div class="col-md-6">
                         <label for="last-name" class="form-label">Last name: </label>
-                        <input type="text" id="last-name" placeholder="Last name" class="form-control">
+                        <input #shipping_last type="text" id="last-name" placeholder="Last name" class="form-control">
                     </div>
                 </div>
                 
                 
                 <div class="form-group">
                     <label for="card-num" class="form-label">Address Line 1: </label>
-                    <input type="text" id="card-num" placeholder="Street Address, PO Box, Company Name" class="form-control">
+                    <input #address type="text" id="card-num" placeholder="Street Address, PO Box, Company Name" class="form-control">
                 </div>
                 <div class="form-group">
                     <label for="card-num2" class="form-label">Address Line 2: </label>
-                    <input type="text" id="card-num2" placeholder="Apartment unit, suite, building, floor, etc." class="form-control">
+                    <input #address2 type="text" id="card-num2" placeholder="Apartment unit, suite, building, floor, etc." class="form-control">
                 </div>
                 
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="city" class="form-label">City: </label>
-                        <input type="text" id="city" placeholder="City" class="form-control">
+                        <input #city type="text" id="city" placeholder="City" class="form-control">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="state" class="form-label">State/Province/Region: </label>
-                        <input type="text" id="state" placeholder="State/Province/Region" class="form-control">
+                        <input #state type="text" id="state" placeholder="State/Province/Region" class="form-control">
                     </div>
                     <div class="form-group col-md-2">
                         <label for="zip" class="form-label">Zip/Postal Code: </label>
-                        <input type="text" id="zip" placeholder="Zip/Postal Code" class="form-control">
+                        <input #zip type="text" id="zip" placeholder="Zip/Postal Code" class="form-control">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-8">
                         <label for="country" class="form-label">Country: </label>
-                        <input type="text" id="country" placeholder="Country" class="form-control">
+                        <input #country type="text" id="country" placeholder="Country" class="form-control">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="phone-num" class="form-label">Phone: </label>
-                        <input type="text" id="phone-num" placeholder="Phone" class="form-control">
+                        <input #phone type="text" id="phone-num" placeholder="Phone" class="form-control">
                     </div>
                 </div>
             </form>
-            <button routerLink="/payment" routerLinkActive="active" class="button">Continue</button>
+            <button (click)="submitShipping(shipping_first.value,shipping_last.value, address.value, address2.value, city.value, state.value, zip.value, country.value, phone.value)" routerLink="/payment" routerLinkActive="active" class="button">Continue</button>
         </div>
     </div>
 
