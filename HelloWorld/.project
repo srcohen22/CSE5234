@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>inventory-management</name>
-	<name>CSE5234</name>
+	<name>HelloWorld</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -28,7 +27,5 @@
 		<nature>org.eclipse.wst.common.project.facet.core.nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
-	</buildSpec>
-	<natures>
 	</natures>
 </projectDescription>
