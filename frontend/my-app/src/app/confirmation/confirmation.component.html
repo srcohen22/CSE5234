@@ -1,12 +1,27 @@
 
-<div class="confirm-background">
-    <div class="confirm-text">
-        <h1>You are all set!</h1>
-        <h2>We'll send a confirmation and delivery updates to buckeyeBrutus@osu.edu</h2>
-        <h2>Order #OSU12345</h2>
-        <img src="assets/tick2.jpg" alt="Tick" height="200">
-        <button routerLink="" routerLinkActive="active" class="button" >Return to Home Page</button>
+<!--{% if status=="true" %}-->
+<div *ngIf="status;then Success else Error"></div>
+<ng-template #Success>
+    <div class="confirm-background">
+        <div class="confirm-text">
+            <h1>You are all set!</h1>
+            <h2>We'll send a confirmation and delivery updates to buckeyeBrutus@osu.edu</h2>
+            <h2>Order Number #{{order_num}}</h2>
+            <img src="assets/tick2.jpg" alt="Tick" height="200">
+            <button routerLink="" routerLinkActive="active" class="button" >Return to Home Page</button>
+        </div>
     </div>
-    
-</div>
+</ng-template>
+
+<ng-template #Error>
+    <div class="confirm-background">
+        <div class="confirm-text">
+            <h1>We are currently out of stock!</h1>
+            <h2>Please try ordering lower quantity</h2>
+            <img src="assets/sad.png" alt="Sad" height="200">
+            <button routerLink="" routerLinkActive="active" class="button" >Return to Home Page</button>
+        </div>
+    </div>  
+</ng-template>
+
 
