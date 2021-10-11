@@ -21,7 +21,6 @@ import { FinalSummaryComponent } from './final-summary/final-summary.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { HttpClient } from '@angular/common/http';
 import { HttpClientModule  } from '@angular/common/http';
 
 @NgModule({

@@ -1,9 +1,10 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Injectable } from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import { Foods } from './foods';
 import { FOOD } from './mock-foods'
 import { CartService } from '../cart.service'
 import { AppComponent } from '../app.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-food-list',
@@ -11,13 +12,21 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./food-list.component.css']
 })
 export class FoodListComponent implements OnInit {
+  
   @Output() updateCart = new EventEmitter();
 
   food = FOOD;
 
-  constructor(private cartService: CartService,private appComponent: AppComponent) { }
+  constructor(private cartService: CartService,private appComponent: AppComponent, private http:HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get("http://127.0.0.1:5000/inventory").subscribe(result => {
+      var data = Object.values(result)
+      this.food = []
+      for(var i = 0; i < data.length; i++){
+        this.food.push((data[i]))
+      }
+    })
   }
   
 
@@ -44,3 +53,4 @@ export class FoodListComponent implements OnInit {
     }
   }
 }
+
