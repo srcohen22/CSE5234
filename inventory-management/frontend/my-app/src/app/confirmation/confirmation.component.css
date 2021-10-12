@@ -1,0 +1,65 @@
+.confirm-background{
+    background-color: white;
+    margin: auto;
+    max-width: 60rem;
+    margin-top: 100px;
+    padding-top: 40mm;
+    padding-bottom: 30mm;
+    opacity: 90%;
+    
+    
+    
+}
+.confirm-text{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+}
+
+h1 {
+font-size: 10mm;
+}
+img{
+    padding-top: 10mm;
+}
+
+
+.button {
+    background-color: #000;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block; 
+    color: #fff;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    margin-top: 60px;
+    margin-left: 230px;
+    
+  }
+
+
+.button2 {
+    background-color: #000;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: block; 
+    color: #fff;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 0;
+    cursor: pointer;
+    outline: 0;
+    margin-top: 60px;
+    margin-left: 230px;
+    
+  }

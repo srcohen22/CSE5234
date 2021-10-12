@@ -1,3 +1,4 @@
+package edu.osu.cse5234.business;
 
 public class Item {
 
@@ -6,13 +7,18 @@ public class Item {
 	int availableQuantity;
 	double price;
 	
-	public Item(int id, String name, int q, double p) {
-		this.id = id;
-		this.name = name;
-		this.availableQuantity = q;
-		this.price = p;
+	public Item () {
+		
 	}
 	
+	public Item(int id, String name, int availableQuantity, double price) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.availableQuantity = availableQuantity;
+		this.price = price;
+	}
+
 	public int getId() {
 		return this.id;
 	}
