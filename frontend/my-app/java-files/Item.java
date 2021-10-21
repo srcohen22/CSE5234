@@ -4,19 +4,57 @@ public class Item {
 
 	int id;
 	String name;
-	int availableQuantity;
+	String description;
+	int cart_quantity;
+	int temp_quantity;
 	double price;
+	String image;
 	
 	public Item () {
 		
 	}
 	
-	public Item(int id, String name, int availableQuantity, double price) {
+	public Item(int id, String name, String description, int cart_quantity, int temp_quantity, double price, String image) {
 		super();
 		this.id = id;
 		this.name = name;
-		this.availableQuantity = availableQuantity;
+		this.description = description;
+		this.cart_quantity = cart_quantity;
+		this.temp_quantity = temp_quantity;
 		this.price = price;
+		this.image = image;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public int getCart_quantity() {
+		return cart_quantity;
+	}
+
+	public void setCart_quantity(int cart_quantity) {
+		this.cart_quantity = cart_quantity;
+	}
+
+	public int getTemp_quantity() {
+		return temp_quantity;
+	}
+
+	public void setTemp_quantity(int temp_quantity) {
+		this.temp_quantity = temp_quantity;
+	}
+
+	public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
 	}
 
 	public int getId() {
@@ -34,15 +72,7 @@ public class Item {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public int getQuantity() {
-		return this.availableQuantity;
-	}
-	
-	public void setQuantity(int quant) {
-		this.availableQuantity = quant;
-	}
-	
+
 	public double getPrice() {
 		return this.price;
 	}

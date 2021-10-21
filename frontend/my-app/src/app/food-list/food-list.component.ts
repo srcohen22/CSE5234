@@ -20,11 +20,11 @@ export class FoodListComponent implements OnInit {
   constructor(private cartService: CartService,private appComponent: AppComponent, private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get("http://127.0.0.1:5000/inventory").subscribe(result => {
+    this.http.get("http://localhost:9080/testservice/inventory").subscribe(result => {
       var data = Object.values(result)
       this.food = []
-      for(var i = 0; i < data.length; i++){
-        this.food.push((data[i]))
+      for(var i = 0; i < data[0].length; i++){
+        this.food.push((data[0][i]))
       }
     })
   }

@@ -17,10 +17,13 @@ public class InventoryManagementService {
 		Inventory currentInventory = new Inventory();
 		List<Item> availableItems = new ArrayList<Item>();
 		
+		String CHEESE_CASSEROLE_DESC = "Enjoy this delectable home-style meal cooked by only the most homely of chefs. This bundle of cheesy goodness will melt your taste buds through the sheer potency of its existence.";
 		
-		availableItems.add(new Item(1, "hi", 1, 1));
-		availableItems.add(new Item(2, "hii", 2, 2));
-		availableItems.add(new Item(3, "hiii", 3, 3));
+		
+		
+		availableItems.add(new Item(1, "Cheese Casserole", CHEESE_CASSEROLE_DESC, 1, 0, 1, "../assets/cheesecasserole.jpg"));
+		availableItems.add(new Item(2, "hii", "", 2, 0, 2, ""));
+		availableItems.add(new Item(3, "hiii", "", 3, 0, 3, ""));
 		
 		currentInventory.setItems(availableItems);
 		return currentInventory;

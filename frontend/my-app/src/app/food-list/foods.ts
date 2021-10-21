@@ -1,8 +1,9 @@
 export interface Foods {
+  id: number;
   name: string;
   description: string;
-  price: number;
   temp_quantity: number;
   cart_quantity: number;
+  price: number;
   image?: string;
 }
