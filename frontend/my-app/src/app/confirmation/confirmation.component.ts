@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { HttpClientModule  } from '@angular/common/http';
 import { CartService } from '../cart.service';
+import { CustomerService } from '../customer.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -10,31 +11,32 @@ import { CartService } from '../cart.service';
 })
 export class ConfirmationComponent implements OnInit {
   status=false;
+  wait=true;
+  cart=true;
   order_num='0';
-  flag=true;
   items = this.cartService.items;
+  cust_details=this.customerService.shipping
+  payment_details=this.customerService.payment
   arr:Array<string>=[];
-  constructor(private http:HttpClient,private cartService: CartService) { }
+  constructor(private http:HttpClient,private cartService: CartService,private customerService: CustomerService) { }
   ngOnInit(): void {
-
-      var url="https://bmvtz42mjf.execute-api.us-east-1.amazonaws.com/prod/todoitems?";
-      for(var i = 0; i < this.items.length; i++){
-        var item_name=this.items[i].name;
-        var item_quantity=this.items[i].cart_quantity;
-        var full_url=url+"item="+item_name+"&quantity="+item_quantity;
-        this.http.get(full_url).subscribe(data => {
-          var order_num=JSON.parse(JSON.stringify(data));
-          if(order_num=='0')
-          {
-              this.status=false;
-              return;
-          }
-          else
+    if(this.items.length>0)
+    {
+      var url="https://ztgm3rs36i.execute-api.us-east-1.amazonaws.com/prod/todoitems";
+      this.http.post(url,{'items':this.items,'cust_detail':this.cust_details[this.cust_details.length-1],'payment_detail':this.payment_details[this.payment_details.length-1]}).subscribe(data => {
+          var order_num=JSON.stringify(data);
+          if(order_num!='0')
           {
             this.order_num=order_num;
             this.status=true;
+            //this.cartService.clearCart();
           }
+          this.wait=false;
         });
-      }
     }
+    else{
+      this.wait=false;
+      this.cart=false;
+    }
+  }
 }

@@ -20,11 +20,11 @@ export class FoodListComponent implements OnInit {
   constructor(private cartService: CartService,private appComponent: AppComponent, private http:HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get("http://localhost:9080/testservice/inventory").subscribe(result => {
+    this.http.get("https://wk3qzq2p04.execute-api.us-east-1.amazonaws.com/prod/inventory-management").subscribe(result => {
       var data = Object.values(result)
       this.food = []
-      for(var i = 0; i < data[0].length; i++){
-        this.food.push((data[0][i]))
+      for(var i = 0; i < data.length; i++){
+        this.food.push((data[i]));
       }
     })
   }
@@ -33,7 +33,7 @@ export class FoodListComponent implements OnInit {
   increase(food: Foods): void {
     for(var i = 0; i < this.food.length; i++){
       if(this.food[i].name == food.name){
-        this.food[i].temp_quantity += 1;
+        this.food[i].temp_quantity = ((this.food[i].temp_quantity+1)||1);
       }
     }
   }
@@ -41,7 +41,7 @@ export class FoodListComponent implements OnInit {
   decrease(food: Foods): void {
     for(var i = 0; i < this.food.length; i++){
       if(this.food[i].name == food.name && this.food[i].temp_quantity > 0){
-        this.food[i].temp_quantity -= 1;
+        this.food[i].temp_quantity = ((this.food[i].temp_quantity-1)||0);
       }
     }
   }

@@ -10,7 +10,7 @@ inventory = [
     {"name": "Cantaloupe", "quantity": 50, "price": 10, "id": 3, "description":"Have you ever tried cantaloupe wrapped in prosciutto? It's soooooooo good! But it doesn't start with a 'C', so it doesn't belong here."},
     {"name": "Corn Chowder", "quantity": 60, "price": 9, "id": 4, "description":"Have you ever seen the hit Cartoon Network show, 'Chowder'? It doesn't have anything to do with Corn Chowder, but it was a good show."},
     {"name": "Coffee", "quantity": 55, "price": 4, "id": 5, "description":"Inject yourself with this high-quality performance-enhancing dru-... stimulant! Not only tasty, but extremely effective, too!"},
-    {"name": "Chicken Chilaquiles", "quantity": 250, "price": 12, "id": 6, "description":"Why did the chicken cross the road? To get turned into these delicious chicken chilaquiles for you to enjoy! You can taste the cruelty and death in every bite!"},
+    {"name": "Chicken Chilaquiles", "quantity": 250, "price": 12, "id": 6, "description":"Why did the chicken cross the road? To get turned into these delicious chicken chilaquiles for you to enjoy! You can taste the cruelty and death in every bite!"}
 ]
 
 @app.route('/inventory')
