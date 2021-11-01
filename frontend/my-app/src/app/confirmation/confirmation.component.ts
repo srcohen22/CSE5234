@@ -14,6 +14,7 @@ export class ConfirmationComponent implements OnInit {
   wait=true;
   cart=true;
   order_num='0';
+  payment_id='0'
   items = this.cartService.items;
   cust_details=this.customerService.shipping
   payment_details=this.customerService.payment
@@ -24,10 +25,12 @@ export class ConfirmationComponent implements OnInit {
     {
       var url="https://ztgm3rs36i.execute-api.us-east-1.amazonaws.com/prod/todoitems";
       this.http.post(url,{'items':this.items,'cust_detail':this.cust_details[this.cust_details.length-1],'payment_detail':this.payment_details[this.payment_details.length-1]}).subscribe(data => {
-          var order_num=JSON.stringify(data);
-          if(order_num!='0')
+          var text = JSON.stringify(data)
+          var order = JSON.parse(text)
+          if(order.length != 0)
           {
-            this.order_num=order_num;
+            this.order_num=order["order"];
+            this.payment_id=order["payment"]
             this.status=true;
             //this.cartService.clearCart();
           }
