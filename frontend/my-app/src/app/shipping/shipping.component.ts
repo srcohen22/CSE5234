@@ -27,7 +27,7 @@ export class ShippingComponent implements OnInit {
     this.shippingInfo = this.customerService.getShipping();
   }
 
-  submitShipping(shipping_first: string, shipping_last: string, address: string, address2: string, city: string, state: string, zip: string, country: string, phone: string) {
+  submitShipping(shipping_first: string, shipping_last: string, address: string, address2: string, city: string, state: string, zip: string, country: string, phone: string, email: string) {
     this.shippingInfo.first_name = shipping_first
     this.shippingInfo.last_name = shipping_last
     this.shippingInfo.address = address
@@ -37,7 +37,9 @@ export class ShippingComponent implements OnInit {
     this.shippingInfo.zip = parseInt(zip)
     this.shippingInfo.country = country
     this.shippingInfo.phone = phone
+    this.shippingInfo.email = email
     this.customerService.addShipping(this.shippingInfo)
+    console.log(this.shippingInfo.email)
   }
 
 }

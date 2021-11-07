@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="form-row">
-                    <div class="form-group col-md-8">
+                    <div class="form-group col-md-4">
                         <label for="country" class="form-label">Country: </label>
                         <input #country value="{{shippingInfo.country}}" type="text" id="country" placeholder="Country" class="form-control">
                     </div>
@@ -48,9 +48,13 @@
                         <label for="phone-num" class="form-label">Phone: </label>
                         <input #phone value="{{shippingInfo.phone}}" type="text" id="phone-num" placeholder="Phone" class="form-control">
                     </div>
+                    <div class="form-group col-md-4">
+                        <label for="email" class="form-label">Email: </label>
+                        <input #email value="{{shippingInfo.email}}" type="text" id="email" placeholder="Email Address" class="form-control">
+                    </div>
                 </div>
             </form>
-            <button (click)="submitShipping(shipping_first.value,shipping_last.value, address.value, address2.value, city.value, state.value, zip.value, country.value, phone.value)" routerLink="/payment" routerLinkActive="active" class="button">Continue</button>
+            <button (click)="submitShipping(shipping_first.value,shipping_last.value, address.value, address2.value, city.value, state.value, zip.value, country.value, phone.value, email.value)" routerLink="/payment" routerLinkActive="active" class="button">Continue</button>
         </div>
     </div>
 

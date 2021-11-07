@@ -14,7 +14,8 @@ export class ConfirmationComponent implements OnInit {
   wait=true;
   cart=true;
   order_num='0';
-  payment_id='0'
+  payment_id='0';
+  email = '';
   items = this.cartService.items;
   cust_details=this.customerService.shipping
   payment_details=this.customerService.payment
@@ -30,7 +31,8 @@ export class ConfirmationComponent implements OnInit {
           if(order.length != 0)
           {
             this.order_num=order["order"];
-            this.payment_id=order["payment"]
+            this.payment_id=order["payment"];
+            this.email = this.cust_details[0].email;
             this.status=true;
             //this.cartService.clearCart();
           }

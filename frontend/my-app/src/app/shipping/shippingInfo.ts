@@ -8,4 +8,5 @@ export interface ShippingInfo {
     zip: number;
     country: string;
     phone: string;
+    email: string;
 }
